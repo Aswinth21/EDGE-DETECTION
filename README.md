@@ -24,8 +24,8 @@ Using Laplacian operator from cv2,detect the edges of the image and Using Canny 
 
 ## PROGRAM:
 ```
-DEVELOPED BY: Jeyabalan T
-REGISTER NUMBER: 212222240040
+DEVELOPED BY: ASWINTH T
+REGISTER NUMBER: 212222230015
 ```
 ## IMPORT PACKAGES AND LOAD IMAGES
   ```python
@@ -36,6 +36,8 @@ img=cv2.imread("image.jpg",0)
 gray=cv2.cvtColor(img,cv2.COLOR_GRAY2RGB)
 gray = cv2.GaussianBlur(gray,(3,3),0)
 ```
+#### Original Image:
+![image](https://github.com/user-attachments/assets/7e6cf788-a510-42f7-a8a5-5a36d9fe3dc5)
 ## SOBEL EDGE DETECTOR:
 **SOBEL X:**
   ```python
@@ -45,6 +47,9 @@ plt.title("Sobel X axis")
 plt.axis("off")
 plt.show()
 ```
+#### Output:
+![Screenshot 2024-10-02 175022](https://github.com/user-attachments/assets/3f7e181b-a7e6-4f8f-be2d-9a4d1747bdc1)
+
 **SOBEL Y:**
 ```python
 sobely = cv2.Sobel(gray,cv2.CV_64F,0,1,ksize=5)
@@ -53,6 +58,9 @@ plt.title("Sobel Y axis")
 plt.axis("off")
 plt.show()
 ```
+#### Output:
+![Screenshot 2024-10-02 175027](https://github.com/user-attachments/assets/287d969c-16b3-4fbd-8b44-eca66fcf297d)
+
 **SOBEL XY:**
   ```python
   sobelxy = cv2.Sobel(gray,cv2.CV_64F,1,1,ksize=5)
@@ -61,6 +69,8 @@ plt.title("Sobel XY axis")
 plt.axis("off")
 plt.show()
 ```
+#### Output:
+![Screenshot 2024-10-02 175033](https://github.com/user-attachments/assets/7ac818d8-cf86-46c3-be23-872e6621d40d)
 ## LAPLACIAN EDGE DETECTOR:
 ```python
 lap=cv2.Laplacian(gray,cv2.CV_64F)
@@ -69,6 +79,8 @@ plt.title("Laplacian Edge Detector")
 plt.axis("off")
 plt.show()
 ```
+#### Output:
+![Screenshot 2024-10-02 175039](https://github.com/user-attachments/assets/4b440b3e-4290-42db-922c-ac23e4bac1ea)
 ## CANNY EDGE DETECTOR:
 ```python
 canny=cv2.Canny(gray,120,150)
@@ -77,24 +89,7 @@ plt.title("Canny Edge Detector")
 plt.axis("off")
 plt.show()
 ```
-## Output:
-### ORIGINAL IMAGE:
-![image](https://github.com/user-attachments/assets/7e6cf788-a510-42f7-a8a5-5a36d9fe3dc5)
-
-### SOBEL EDGE DETECTOR
-![Screenshot 2024-10-02 175022](https://github.com/user-attachments/assets/3f7e181b-a7e6-4f8f-be2d-9a4d1747bdc1)
-
-![Screenshot 2024-10-02 175027](https://github.com/user-attachments/assets/287d969c-16b3-4fbd-8b44-eca66fcf297d)
-
-![Screenshot 2024-10-02 175033](https://github.com/user-attachments/assets/7ac818d8-cf86-46c3-be23-872e6621d40d)
-
-
-### LAPLACIAN EDGE DETECTOR
-![Screenshot 2024-10-02 175039](https://github.com/user-attachments/assets/4b440b3e-4290-42db-922c-ac23e4bac1ea)
-
-
-
-### CANNY EDGE DETECTOR
+#### Output:
 ![Screenshot 2024-10-02 175045](https://github.com/user-attachments/assets/1b38a391-74c1-4916-9282-abda4103b5a7)
 
 
